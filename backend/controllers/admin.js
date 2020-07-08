@@ -15,3 +15,23 @@ exports.getProducts = (req, res) => {
 		res.json(products);
 	});
 };
+
+exports.getProduct = (req, res) => {
+	const prodId = req.params.productId;
+
+	Product.findById(prodId, (product) => {
+		console.log(product);
+		res.status(200).json(product);
+	});
+};
+
+exports.postDeleteProduct = (req, res) => {
+	const prodId = req.body.productId;
+
+	if (!prodId) {
+		res.json({ msg: 'No Product Found' });
+	}
+	Product.deleteById(prodId);
+	console.log('Product Deleted');
+	res.json({ msg: 'Product Deleted' });
+};

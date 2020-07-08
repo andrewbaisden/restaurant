@@ -39,7 +39,7 @@ module.exports = class Products {
 					console.log(err);
 				});
 			} else {
-				this.id = uuidv4;
+				this.id = uuidv4();
 				products.push(this);
 
 				fs.writeFile(p, JSON.stringify(products), (err) => {
@@ -50,8 +50,8 @@ module.exports = class Products {
 	}
 	static deleteById(id) {
 		getProductsFromFile((products) => {
-			const products = products.find((p) => p.id !== id);
-			fs.writeFile(p, JSON.stringify(products), (err) => {
+			const updatedProduct = products.filter((p) => p.id !== id);
+			fs.writeFile(p, JSON.stringify(updatedProduct), (err) => {
 				console.log(err);
 			});
 		});
