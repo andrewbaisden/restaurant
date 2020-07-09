@@ -4,6 +4,9 @@ import { getProducts, getProduct } from '../actions/menu';
 import styled, { createGlobalStyle } from 'styled-components';
 import { Link } from 'react-router-dom';
 import FlameDeliciousLogo from '../img/flame-delicious-logo.svg';
+import JustEat from '../img/just-eat-logo.png';
+import Deliveroo from '../img/deliveroo-logo.png';
+import UberEats from '../img/uber-eats-logo.png';
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700&display=swap');
@@ -220,6 +223,85 @@ const ContentOurStoryArticlep = styled.p`
 	color: #ffffff;
 `;
 
+const ContentContactUs = styled.section`
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin-top: 2rem;
+`;
+
+const ContentContactUsArticle = styled.article`
+	width: 55rem;
+	background: #120507;
+	padding: 2rem;
+	text-align: center;
+	height: 40rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`;
+
+const ContentContactUsArticleEnquiry = styled.article`
+	width: 55rem;
+	background: #e68c1d;
+	padding: 2rem;
+	text-align: center;
+	height: 40rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`;
+
+const ContentContactUsArticleh1 = styled.h1`
+	text-transform: uppercase;
+	color: #ffffff;
+	font-size: 3rem;
+
+	&::after {
+		content: '';
+		width: 100%;
+		border-bottom: 1px solid #ffaa42;
+		display: block;
+	}
+`;
+
+const ContentContactUsArticlep = styled.p`
+	margin: 2rem 0 2rem 0;
+	color: #ffffff;
+`;
+
+const ContentLinkJobsEnquiry = styled.a`
+	background: none;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	font-weight: 700;
+	border: 1px solid #ffffff;
+
+	&:hover {
+		background: #ffdcb1;
+	}
+`;
+
+const ContentContactUsArticleContainer = styled.div``;
+
+const Delivery = styled.section`
+	margin-top: 2rem;
+	background: #f5f5f5;
+	padding: 2rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+`;
+
+const DeliveryTitle = styled.h1`
+	text-transform: uppercase;
+`;
+
 const Home = ({ getProducts, getProduct }) => {
 	useEffect(() => {
 		getProducts();
@@ -316,35 +398,46 @@ const Home = ({ getProducts, getProduct }) => {
 							</ContentLink>
 						</ContentOurStoryArticle>
 					</ContentOurStory>
-					<section>
-						<article>
-							<h1>Flame Delicious Jobs</h1>
-							<p>
-								We have so much to offer and we are open to hiring anyone so long as they have a strong work drive. See
-								if you have what it takes to join our brand and family.
-							</p>
-							<Link href="/" to="/">
-								Apply Now
-							</Link>
-						</article>
-						<article>
-							<h1>Ask us something</h1>
-							<p>
-								Is there something that you want to know? Go ahead and give us a shout lets see if we can help you out.
-							</p>
-							<Link href="/" to="/">
-								Send us your enquiry
-							</Link>
-						</article>
-					</section>
+					<ContentContactUs>
+						<ContentContactUsArticle>
+							<ContentContactUsArticleContainer>
+								<ContentContactUsArticleh1>Flame Delicious Jobs</ContentContactUsArticleh1>
+								<ContentContactUsArticlep>
+									We have so much to offer and we are open to hiring anyone so long as they have a strong work drive.
+									See if you have what it takes to join our brand and family.
+								</ContentContactUsArticlep>
+								<ContentLinkJobsEnquiry href="/" to="/">
+									Apply Now
+								</ContentLinkJobsEnquiry>
+							</ContentContactUsArticleContainer>
+						</ContentContactUsArticle>
+						<ContentContactUsArticleEnquiry>
+							<ContentContactUsArticleContainer>
+								<ContentContactUsArticleh1>Ask us something</ContentContactUsArticleh1>
+								<ContentContactUsArticlep>
+									Is there something that you want to know? Go ahead and give us a shout lets see if we can help you
+									out.
+								</ContentContactUsArticlep>
+								<ContentLinkJobsEnquiry href="/" to="/">
+									Send us your enquiry
+								</ContentLinkJobsEnquiry>
+							</ContentContactUsArticleContainer>
+						</ContentContactUsArticleEnquiry>
+					</ContentContactUs>
 				</main>
 				<footer>
-					<section>
-						<h1>Let our food come to you</h1>
-						<p>Just Eat</p>
-						<p>deliveroo</p>
-						<p>Uber Eats</p>
-					</section>
+					<Delivery>
+						<DeliveryTitle>Let our food come to you</DeliveryTitle>
+						<div>
+							<img src={JustEat} alt="Just Eat" height="50" />
+						</div>
+						<div>
+							<img src={Deliveroo} alt="Deloveroo" height="50" />
+						</div>
+						<div>
+							<img src={UberEats} alt="Uber Eats" height="50" />
+						</div>
+					</Delivery>
 					<section>
 						<div>
 							<p>Home</p>
