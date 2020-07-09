@@ -7,6 +7,10 @@ import FlameDeliciousLogo from '../img/flame-delicious-logo.svg';
 import JustEat from '../img/just-eat-logo.png';
 import Deliveroo from '../img/deliveroo-logo.png';
 import UberEats from '../img/uber-eats-logo.png';
+import Twitter from '../img/twitter-logo.svg';
+import Instagram from '../img/instagram-logo.svg';
+import Facebook from '../img/facebook-logo.svg';
+import YouTube from '../img/youtube-logo.svg';
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700&display=swap');
@@ -302,6 +306,65 @@ const DeliveryTitle = styled.h1`
 	text-transform: uppercase;
 `;
 
+const FooterNavAndSocial = styled.section`
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	margin: 2rem 0 0 0;
+	background: #e68c1d;
+	padding: 2rem;
+	color: #ffffff;
+	align-items: center;
+`;
+
+const FooterNav = styled.div`
+	display: flex;
+	flex-flow: column wrap;
+`;
+
+const FooterSocial = styled.div`
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	width: 50rem;
+`;
+
+const FooterLink = styled.a`
+	text-decoration: none;
+	color: #ffffff;
+	margin-bottom: 1rem;
+
+	&:hover {
+		color: #666666;
+	}
+`;
+
+const FooterLegals = styled.div`
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	background: #000000;
+	padding: 2rem;
+	margin-bottom: 2rem;
+`;
+
+const FooterLegalsLinks = styled.div`
+	display: flex;
+	flex-flow: row wrap;
+	color: #ffffff;
+	align-items: center;
+`;
+
+const SubNav = styled.a`
+	text-decoration: none;
+	margin-right: 2rem;
+	color: #ffffff;
+
+	&:hover {
+		color: #666666;
+	}
+`;
+
 const Home = ({ getProducts, getProduct }) => {
 	useEffect(() => {
 		getProducts();
@@ -438,38 +501,62 @@ const Home = ({ getProducts, getProduct }) => {
 							<img src={UberEats} alt="Uber Eats" height="50" />
 						</div>
 					</Delivery>
-					<section>
+					<FooterNavAndSocial>
+						<FooterNav>
+							<FooterLink to="/" href="/">
+								Home
+							</FooterLink>
+							<FooterLink to="/menu" href="/menu">
+								Our Menu
+							</FooterLink>
+						</FooterNav>
+						<FooterSocial>
+							<div>
+								<Link href="/" to="/">
+									<img src={Twitter} alt="Twitter" height="30" />
+								</Link>
+							</div>
+							<div>
+								<Link href="/" to="/">
+									<img src={Instagram} alt="Instagram" height="30" />
+								</Link>
+							</div>
+							<div>
+								<Link href="/" to="/">
+									<img src={Facebook} alt="Facebook" height="30" />
+								</Link>
+							</div>
+							<div>
+								<Link href="/" to="/">
+									<img src={YouTube} alt="YouTube" height="30" />
+								</Link>
+							</div>
+						</FooterSocial>
+					</FooterNavAndSocial>
+					<FooterLegals>
 						<div>
-							<p>Home</p>
-							<p>Our Menu</p>
+							<Link to="/" href="/">
+								<img src={FlameDeliciousLogo} alt="Flame Delicious Logo" height="50" />
+							</Link>
 						</div>
-						<div>
-							<div>Twitter</div>
-							<div>Instagram</div>
-							<div>Facebook</div>
-							<div>YouTube</div>
-						</div>
-					</section>
-					<section>
-						<h1>Flame Delicious</h1>
-						<nav>
-							<Link href="/" to="/">
+						<FooterLegalsLinks>
+							<SubNav href="/" to="/">
 								Privacy
-							</Link>
-							<Link href="/" to="/">
+							</SubNav>
+							<SubNav href="/" to="/">
 								Terms & Conditions
-							</Link>
-							<Link href="/" to="/">
+							</SubNav>
+							<SubNav href="/" to="/">
 								Tax Strategy
-							</Link>
-							<Link href="/" to="/">
+							</SubNav>
+							<SubNav href="/" to="/">
 								Modern Slavery Act
-							</Link>
-							<Link href="/" to="/">
+							</SubNav>
+							<SubNav href="/" to="/">
 								&copy; Flame Delicious. All Rights Reserved.
-							</Link>
-						</nav>
-					</section>
+							</SubNav>
+						</FooterLegalsLinks>
+					</FooterLegals>
 				</footer>
 			</div>
 		</Fragment>
