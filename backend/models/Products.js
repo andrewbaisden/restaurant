@@ -15,9 +15,11 @@ const getProductsFromFile = (cb) => {
 };
 
 module.exports = class Products {
-	constructor(id, name, allergens, kj, kcal, fat, sat, carbs, sugars, protien, salt) {
+	constructor(id, name, img, description, allergens, kj, kcal, fat, sat, carbs, sugars, protien, salt) {
 		this.id = id;
 		this.name = name;
+		this.img = img;
+		this.description = description;
 		this.allergens = allergens;
 		this.kj = kj;
 		this.kcal = kcal;

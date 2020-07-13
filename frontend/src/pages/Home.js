@@ -1,6 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
-import { connect } from 'react-redux';
-import { getProducts, getProduct } from '../actions/menu';
+import React, { Fragment } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import MainHome from '../components/MainHome';
 import Header from '../components/Header';
@@ -23,11 +21,7 @@ const GlobalStyle = createGlobalStyle`
 	}
 `;
 
-const Home = ({ getProducts, getProduct }) => {
-	useEffect(() => {
-		getProducts();
-		getProduct('b4bc2e28-21a3-47ea-ba3b-6bad40b35504');
-	}, []);
+const Home = () => {
 	return (
 		<Fragment>
 			<GlobalStyle />
@@ -38,4 +32,4 @@ const Home = ({ getProducts, getProduct }) => {
 	);
 };
 
-export default connect(null, { getProducts, getProduct })(Home);
+export default Home;

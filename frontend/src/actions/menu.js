@@ -5,7 +5,7 @@ export const getProducts = () => (dispatch) => {
 	axios
 		.get('http://localhost:8080/menu')
 		.then((response) => {
-			console.log(response);
+			// console.log(response);
 			const data = response.data;
 			dispatch({
 				type: GET_PRODUCTS,
@@ -21,7 +21,7 @@ export const getProduct = (product) => (dispatch) => {
 	axios
 		.get(`http://localhost:8080/menu/${product}`)
 		.then((response) => {
-			console.log(response);
+			// console.log(response);
 			const data = response.data;
 			dispatch({
 				type: GET_PRODUCT,

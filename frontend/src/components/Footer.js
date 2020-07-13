@@ -156,9 +156,7 @@ const Footer = () => {
 						<SubNav href="/" to="/">
 							Modern Slavery Act
 						</SubNav>
-						<SubNav href="/" to="/">
-							&copy; Flame Delicious. All Rights Reserved.
-						</SubNav>
+						&copy; Flame Delicious. All Rights Reserved.
 					</FooterLegalsLinks>
 				</FooterLegals>
 			</FooterContent>

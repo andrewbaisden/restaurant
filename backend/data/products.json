@@ -1,1 +1,30 @@
-[{"id":"b4bc2e28-21a3-47ea-ba3b-6bad40b35504","name":"Chicken Filet Burger","allergens":"sesame, milk, egg, wheat, gluten, mustard","kj":"1985","kcal":"475","fat":"19.3","sat":"2.3","carbs":"45.1","sugars":"5.5","salt":"2.02"},{"id":"4cea283d-c043-4178-bad0-ac58bb1c1c0d","name":"BBQ Bacon Tower Burger","allergens":"sesame, milk, egg, wheat, gluten, celery, mustard","kj":"2890","kcal":"643","fat":"22.4","sat":"5.4","carbs":"50","sugars":"6.4","salt":"4.8"}]
+[
+	{
+		"id": "b4bc2e28-21a3-47ea-ba3b-6bad40b35504",
+		"name": "Chicken Filet Burger",
+		"img": "https://hips.hearstapps.com/hmg-prod/images/190416-chicken-burger-082-1556204252.jpg",
+		"description": "Chicken meal",
+		"allergens": "sesame, milk, egg, wheat, gluten, mustard",
+		"kj": "1985",
+		"kcal": "475",
+		"fat": "19.3",
+		"sat": "2.3",
+		"carbs": "45.1",
+		"sugars": "5.5",
+		"salt": "2.02"
+	},
+	{
+		"id": "4cea283d-c043-4178-bad0-ac58bb1c1c0d",
+		"name": "BBQ Bacon Tower Burger",
+		"img": "https://images.pitboss-grills.com/catalog/recipes/1200px/PB_PepperJackBaconBurger_website.jpg",
+		"description": "Bacon meal",
+		"allergens": "sesame, milk, egg, wheat, gluten, celery, mustard",
+		"kj": "2890",
+		"kcal": "643",
+		"fat": "22.4",
+		"sat": "5.4",
+		"carbs": "50",
+		"sugars": "6.4",
+		"salt": "4.8"
+	}
+]
