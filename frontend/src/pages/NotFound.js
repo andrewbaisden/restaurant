@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -20,12 +21,22 @@ const GlobalStyle = createGlobalStyle`
 	}
 `;
 
+const MainContent = styled.main`
+	margin: 0 auto;
+	width: 120rem;
+	max-width: 100%;
+	text-align: center;
+`;
+
 const NotFound = () => {
 	return (
 		<Fragment>
 			<GlobalStyle />
 			<Header />
-			<h1>404 Page Not Found</h1>
+			<MainContent>
+				<h1>404 Page Not Found 😭</h1>
+			</MainContent>
+
 			<Footer />
 		</Fragment>
 	);

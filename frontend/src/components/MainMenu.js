@@ -129,6 +129,7 @@ const MainMenu = ({ getProducts, getProduct, menu }) => {
 								<FoodMenuItem key={food.id}>
 									<div>
 										<FoodMenuItemImg src={food.img} alt={food.name} />
+
 										<FoodContentH1>{food.name}</FoodContentH1>
 										<FoodDescription>{food.description}</FoodDescription>
 									</div>
