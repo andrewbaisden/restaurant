@@ -39,6 +39,21 @@ const MainMenuFoodContainer = styled.div`
 const FoodMenuItem = styled.div`
 	max-width: 30rem;
 	width: 100%;
+	position: relative;
+`;
+
+const DeleteItem = styled.div`
+	position: absolute;
+	bottom: 4rem;
+	right: 2rem;
+`;
+
+const DeleteItemButton = styled.button`
+	padding: 0.5rem;
+	background: #e68c1d;
+	border: none;
+	color: #ffffff;
+	cursor: pointer;
 `;
 
 const FoodMenuItemImg = styled.img`
@@ -129,6 +144,12 @@ const MainMenu = ({ getProducts, getProduct, menu }) => {
 											<FoodListNutrition>protien: {food.protien}</FoodListNutrition>
 											<FoodListNutrition>salt: {food.salt}</FoodListNutrition>
 										</FoodList>
+										<DeleteItem>
+											<form method="POST" action="http://localhost:8080/delete">
+												<input type="hidden" name="productId" value={food.id} />
+												<DeleteItemButton>X</DeleteItemButton>
+											</form>
+										</DeleteItem>
 									</div>
 								</FoodMenuItem>
 							))}

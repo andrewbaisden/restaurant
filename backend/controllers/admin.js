@@ -47,5 +47,5 @@ exports.postDeleteProduct = (req, res) => {
 	}
 	Product.deleteById(prodId);
 	console.log('Product Deleted');
-	res.json({ msg: 'Product Deleted' });
+	res.redirect('http://localhost:3000/menu');
 };

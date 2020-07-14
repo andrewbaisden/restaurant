@@ -341,7 +341,7 @@ const MainHome = () => {
 								The food at Flame Delicious is prepared under the highest standards and we only source food for approved
 								distributors with the highest food and safety standards.
 							</NewsContentp>
-							<ContentLink href="/" to="/menu">
+							<ContentLink href="/menu" to="/menu">
 								Whats on the Menu
 							</ContentLink>
 						</NewsContentContainer>

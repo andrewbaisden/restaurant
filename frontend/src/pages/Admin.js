@@ -69,6 +69,12 @@ const FormInput = styled.input`
 	padding: 1rem;
 `;
 
+const FormTextArea = styled.textarea`
+	width: 40rem;
+	height: 10rem;
+	padding: 1rem;
+`;
+
 const AddItemButton = styled.button`
 	background: #e68c1d;
 	padding: 1rem;
@@ -107,7 +113,7 @@ const Admin = () => {
 					</FormFieldGroup>
 					<FormFieldGroup>
 						<FormLabel>Description</FormLabel>
-						<FormInput type="text" name="description" required />
+						<FormTextArea name="description" rows="4" cols="50" required></FormTextArea>
 					</FormFieldGroup>
 					<FormFieldGroup>
 						<FormLabel>Allergens</FormLabel>
