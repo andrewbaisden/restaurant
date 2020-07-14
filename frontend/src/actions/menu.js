@@ -1,4 +1,4 @@
-import { ADD_PRODUCT, GET_PRODUCTS, GET_PRODUCT } from './types';
+import { GET_PRODUCTS, GET_PRODUCT } from './types';
 import axios from 'axios';
 
 export const getProducts = () => (dispatch) => {

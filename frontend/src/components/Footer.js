@@ -24,10 +24,19 @@ const Delivery = styled.section`
 	flex-flow: row wrap;
 	justify-content: space-around;
 	align-items: center;
+
+	@media screen and (max-width: 1000px) {
+		flex-flow: column wrap;
+	}
 `;
 
 const DeliveryTitle = styled.h1`
 	text-transform: uppercase;
+
+	@media screen and (max-width: 1000px) {
+		margin-bottom: 2rem;
+		text-align: center;
+	}
 `;
 
 const FooterNavAndSocial = styled.section`
@@ -44,6 +53,10 @@ const FooterNavAndSocial = styled.section`
 const FooterNav = styled.div`
 	display: flex;
 	flex-flow: column wrap;
+
+	@media screen and (max-width: 900px) {
+		text-align: center;
+	}
 `;
 
 const FooterSocial = styled.div`
@@ -77,6 +90,10 @@ const FooterLegalsLinks = styled.div`
 	flex-flow: row wrap;
 	color: #ffffff;
 	align-items: center;
+
+	@media screen and (max-width: 900px) {
+		flex-flow: column wrap;
+	}
 `;
 
 const SubNav = styled.a`

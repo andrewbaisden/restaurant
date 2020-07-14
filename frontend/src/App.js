@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Admin from './pages/Admin';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
 import NotFound from './pages/NotFound';
@@ -11,6 +12,7 @@ const App = () => {
 		<Provider store={store}>
 			<Router>
 				<Switch>
+					<Route exact path="/admin" component={Admin} />
 					<Route exact path="/" component={Home} />
 					<Route exact path="/menu" component={Menu} />
 					<Route exact path="*" component={NotFound} />

@@ -15,6 +15,11 @@ const IntroContentBG = styled.section`
 	flex-flow: row nowrap;
 	justify-content: flex-start;
 	align-items: center;
+
+	@media screen and (max-width: 500px) {
+		margin-bottom: 8rem;
+		height: 70rem;
+	}
 `;
 
 const IntroContent = styled.article`
@@ -24,6 +29,10 @@ const IntroContent = styled.article`
 	margin-left: 5rem;
 	text-align: center;
 	padding: 2rem;
+
+	@media screen and (max-width: 1000px) {
+		margin: 0 auto;
+	}
 `;
 
 const IntroContentH1 = styled.h1`
@@ -63,6 +72,10 @@ const NewsContent = styled.section`
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
+
+	@media screen and (max-width: 1160px) {
+		justify-content: center;
+	}
 `;
 
 const NewsContentArticle = styled.article`
@@ -73,6 +86,18 @@ const NewsContentArticle = styled.article`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	@media screen and (max-width: 1160px) {
+		margin: 0 0 2rem 0;
+		width: 55rem;
+		padding: 2rem;
+	}
+
+	@media screen and (max-width: 500px) {
+		margin: 0 0 2rem 0;
+		width: 100%;
+		padding: 2rem;
+	}
 `;
 
 const NewsContentArticleMenu = styled.article`
@@ -83,6 +108,18 @@ const NewsContentArticleMenu = styled.article`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	@media screen and (max-width: 1160px) {
+		margin: 0 0 2rem 0;
+		width: 55rem;
+		padding: 2rem;
+	}
+
+	@media screen and (max-width: 500px) {
+		margin: 0 0 2rem 0;
+		width: 100%;
+		padding: 2rem;
+	}
 `;
 
 const NewsContentContainer = styled.div`
@@ -114,6 +151,10 @@ const MobileContent = styled.section`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	@media screen and (max-width: 1160px) {
+		padding: 2rem;
+	}
 `;
 
 const MobileContentArticle = styled.article`
@@ -147,6 +188,10 @@ const ContentOurStory = styled.section`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	@media screen and (max-width: 1160px) {
+		padding: 2rem;
+	}
 `;
 
 const ContentOurStoryArticle = styled.article`
@@ -177,6 +222,10 @@ const ContentContactUs = styled.section`
 	flex-flow: row wrap;
 	justify-content: space-between;
 	margin-top: 2rem;
+
+	@media screen and (max-width: 1160px) {
+		justify-content: center;
+	}
 `;
 
 const ContentContactUsArticle = styled.article`
@@ -188,6 +237,11 @@ const ContentContactUsArticle = styled.article`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	@media screen and (max-width: 1160px) {
+		margin: 0 0 2rem 0;
+		width: 100%;
+	}
 `;
 
 const ContentContactUsArticleEnquiry = styled.article`
@@ -199,6 +253,11 @@ const ContentContactUsArticleEnquiry = styled.article`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	@media screen and (max-width: 1160px) {
+		margin: 0 0 2rem 0;
+		width: 100%;
+	}
 `;
 
 const ContentContactUsArticleh1 = styled.h1`

@@ -15,11 +15,21 @@ const HeaderContent = styled.header`
 	align-items: center;
 `;
 
+const HeaderLogo = styled.div`
+	@media screen and (max-width: 700px) {
+		margin: 0 auto;
+	}
+`;
+
 const MainNav = styled.nav`
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
 	text-transform: uppercase;
+
+	@media screen and (max-width: 700px) {
+		margin: 4rem auto;
+	}
 `;
 
 const MainNavLink = styled.a`
@@ -38,12 +48,15 @@ const Header = () => {
 	return (
 		<Fragment>
 			<HeaderContent>
-				<div>
+				<HeaderLogo>
 					<Link to="/" href="/">
 						<img src={FlameDeliciousLogo} alt="Flame Delicious Logo" height="80" />
 					</Link>
-				</div>
+				</HeaderLogo>
 				<MainNav>
+					<MainNavLink href="/admin" to="/admin">
+						Admin
+					</MainNavLink>
 					<MainNavLink href="/" to="/">
 						Home
 					</MainNavLink>

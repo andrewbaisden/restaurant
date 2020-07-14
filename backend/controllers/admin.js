@@ -20,7 +20,7 @@ exports.postProducts = (req, res) => {
 	);
 	product.save();
 	console.log('Product Added');
-	res.status(200).json({ msg: 'Product Added' });
+	res.status(200).redirect('http://localhost:3000/menu');
 };
 
 exports.getProducts = (req, res) => {

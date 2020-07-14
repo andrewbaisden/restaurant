@@ -37,19 +37,19 @@ const MainMenuFoodContainer = styled.div`
 `;
 
 const FoodMenuItem = styled.div`
-	max-width: 40rem;
+	max-width: 30rem;
 	width: 100%;
 `;
 
 const FoodMenuItemImg = styled.img`
-	max-width: 40rem;
+	max-width: 30rem;
 	width: 100%;
-	height: 25rem;
+	height: 20rem;
 `;
 
 const FoodContentH1 = styled.h1`
 	text-transform: uppercase;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	text-align: center;
 	margin-top: 1rem;
 
@@ -60,10 +60,18 @@ const FoodContentH1 = styled.h1`
 		width: 100%;
 		height: 0.1rem;
 	}
+
+	@media screen and (max-width: 400px) {
+		padding: 1rem;
+	}
 `;
 
 const FoodDescription = styled.p`
 	margin: 2rem 0 2rem 0;
+
+	@media screen and (max-width: 400px) {
+		padding: 1rem;
+	}
 `;
 
 const FoodList = styled.ul`
@@ -81,7 +89,7 @@ const MainMenu = ({ getProducts, getProduct, menu }) => {
 	useEffect(() => {
 		getProducts();
 		getProduct('b4bc2e28-21a3-47ea-ba3b-6bad40b35504');
-	}, []);
+	}, [getProducts, getProduct]);
 	if (menu.length <= 2) {
 		console.log('Data Not Loaded');
 	} else {
@@ -118,6 +126,7 @@ const MainMenu = ({ getProducts, getProduct, menu }) => {
 											<FoodListNutrition>sat: {food.sat}</FoodListNutrition>
 											<FoodListNutrition>carbs: {food.carbs}</FoodListNutrition>
 											<FoodListNutrition>sugars: {food.sugars}</FoodListNutrition>
+											<FoodListNutrition>protien: {food.protien}</FoodListNutrition>
 											<FoodListNutrition>salt: {food.salt}</FoodListNutrition>
 										</FoodList>
 									</div>
