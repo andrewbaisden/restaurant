@@ -1,6 +1,6 @@
 # Restaurant Website App
 
-![Resturant](https://res.cloudinary.com/d74fh3kw/image/upload/v1594740277/resturant_zuldl1.png 'Resturant')
+![Resturant](/img/resturant.png 'Resturant')
 
 ## Setup and Install
 
